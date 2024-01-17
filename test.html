@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Contacto</title>
+</head>
+<body>
+    <section id="contact">
+        <div class="contact-text">
+            <h3>Ponete en contacto</h3>
+            <p>Dejanos un mensaje, o comunicate<br> por alguno de nuestros canales de contacto.</p>
+        </div>
+        <div class="contact-bottom-color">
+        </div>
+        <div class="contact-card">
+            <div class="contact-form">
+                <h3>Envianos un mensaje</h3>
+                <form action="#" method="post">
+                    <div class="form-1">
+                      <label for="nombre">Nombre</label>
+                      <input type="text" id="nombre" name="nombre" required>
+                    
+                      <label for="apellido">Apellido:</label>
+                      <input type="text" id="apellido" name="apellido" required>
+                    </div>
+                    <div class="form-2">
+                      <label for="empresa">Empresa:</label>
+                      <input type="text" id="empresa" name="empresa">
+                  
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" required>
+                     </div>
+                    <div class="form-3">
+                      <label for="mensaje">Mensaje:</label>
+                      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                     </div>
+                      <button type="submit">Enviar Mensaje</button>
+                  </form>
+            </div>
+            <div class="contact-channels">
+                <h3>Información de contacto</h3>
+                <div class="contact-channels-gmail contact-channels-dis">
+                    <img class="contact-channels-img" src="./resources/imgs/favi/mail.png">
+                    <p>tvprocampo@gmail.com</p>
+                </div>
+                <div class="contact-channels-phoneNumb contact-channels-dis">
+                    <img class="contact-channels-img" src="./resources/imgs/favi/phone.png">
+                    <p>+54 9 123-456 789</p>
+                </div>
+            </div>
+        </div>
+    </section>  
+    <style>
+        #contact {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-text {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 30vw 0 0;
+            color: white;
+            height: 70vh;
+            background: rgb(83,126,17);
+            background: radial-gradient(circle, rgba(83,126,17,1) 0%, rgba(15,48,0,1) 100%);    
+        }
+        .contact-text h3 {
+            font-weight: 300;
+            font-size: 3rem;
+            padding: 7vw 3vw 0.5vw 0;
+        }
+        .contact-text p {
+            font-weight: 200;
+            font-size: 1.5rem;
+        }
+        .contact-bottom-color {
+            position: absolute;
+            height: 30vh;
+            background-color: white;
+        }
+        .contact-card {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 30vw;
+            display: flex;
+            padding-bottom: 10vw;
+        }
+
+        /* contact channels */
+        .contact-channels {
+            background-color: #AAD568;
+        }
+        .contact-channels-img {
+            width: 5vh; 
+            height: 5vh;
+        }
+        .contact-channels-dis {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+        
+        /* contact form */
+        .contact-form {
+            background-color: white;
+        }
+        
+    </style>
+</body>
+</html>

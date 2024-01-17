@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+body, h1, h2, h3, p, ul, li, figure {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f8f8;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hover navbar */
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    overflow-y: hidden;
+    transition: all .5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+nav.fill ul li a {
+  transition: all 2s;
+}
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+
+
+/* Header Styles */
+header {
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+}
+.header-logo {
+    width: 208px;
+    height: 56px;
+}
+nav {
+    display: flex;
+    justify-content: center;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0 16px;
+}
+.header-button {
+    position: relative;
+    width: 15em;
+    height: 4.5em;
+    background-color: #aad667;
+    color: gray;
+    padding: 12px 25px;
+}
+
+
+
+/* Button general cfg */
+.button {
+    border-radius: 35px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+
+/* Front Page style */
+#frontPage {
+    background-size: 250vh;
+    background-repeat: no-repeat;
+    background-image: url(../resources/imgs/index.png);
+    border-radius: 0 0 100px 0;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+    height: 70vh;
+    padding-left: 40vh;
+}
+.frontPage-img {
+    margin: 0 0 10vh 25vh;
+    height: 50vh;
+}
+.frontPage-content h1 {
+    font-size: 4.5em;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.frontPage-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+.frontPage-content button {
+    padding: 16px 35px;
+    width: 15em;
+    height: 4.5em;
+}
+.frontPage-content button:hover {
+    background-color: #c4c4c4;
+}
+
+
+
+/* Presentation section styles */
+#presentationSection {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+#presentationSection h2{
+    padding: 60px 0 30px 0;
+    font-size: 2.5rem;
+}
+.presentationSection-content {
+    display: flex;
+    margin: 5vh 0vh;
+    width: auto;
+    border-radius: 120px 0 120px 0;
+    background-color: #aad667;
+    padding: 10vh;
+}
+.presentationSection-content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.presentationSection-content-text h3 {
+    font-size: 1.7rem;
+}
+.presentationSection-content-text p {
+    margin: 3em;
+    font-size: 1.5rem;
+}
+.presentationSection-content-img {
+    width: 706.6px;
+    height: 451px;
+}
+.presentationSection-content-img img{
+    width: auto;
+    height: 100%;
+}
+.presentationSection-content-reverse {
+    flex-direction: row-reverse;
+    background-color: #aad667;
+    border-radius: 0 120px 0 120px;
+    margin-top: 5vh;
+}
+
+
+/* TV info style */
+#tvInfo {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to top right, #7EA93E, #9BC25F);
+    height: 100%;
+    border-radius: 120px 120px 0 0;
+    padding-top: 10vh;
+}
+.tvInfo-content {
+    display: flex;
+    justify-content: space-evenly;
+}
+.tvInfo-content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 4vh;
+    padding-left: 30vh;
+    width: 50vh;
+}
+.tvInfo-content-text h2, .tvInfo-segments h2 {
+    padding-bottom: 3.5vh;
+    font-size: 2.5rem;
+}
+.tvInfo-content-text p {
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 35px;
+}
+.tvInfo-cards {
+    padding: 1.6vh;
+}
+.tvInfo-cards-struct {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 45vh;
+    height: 20vh;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.tvInfo-cards-struct2 {
+    display: flex;
+    /* align-items: top;
+    justify-content: space-around; */
+}
+.tvInfo-cards-img-struct {
+    display: flex;
+    align-items: top;
+}
+.tvInfo-cards-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Tv program/segment cards div */
+.tvInfo-segments { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+}
+.tvInfo-segments-cards {
+    display: flex;
+    justify-content: center;
+}
+.tvInfo-segments-cards-indiv {
+width: 18rem;
+border-radius: 10px;
+overflow: hidden;
+padding: 3vh;
+background-color: white;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+margin: 5vh 10vh;
+}
+.card-img {
+width: 100%;
+height: auto;
+}
+.card-body {
+padding: 1rem;
+}
+.card-title {
+font-size: 1.25rem;
+margin-bottom: 0.75rem;
+}
+.card-text {
+color: #555;
+margin-bottom: 1.8vh;
+}
+.card-btn {   
+display: inline-block;
+padding: 0.375rem 0.75rem;
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.5;
+color: #fff;
+background-color: #007bff;
+border: 1px solid #007bff;
+border-radius: 0.25rem;
+text-align: center;
+text-decoration: none;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+
+
+/* Our services style */
+#ourServices {
+    padding: 50px 20px;
+    height: 60vh;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+#ourServices h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+.ourServices-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.5em;
+}
+.ourServices-content-1 {
+    grid-area: one;
+}
+.ourServices-content-2 {
+    margin: 0 150px;
+    grid-area: two;
+}
+.ourServices-content-3 {
+    grid-area: three;
+}
+.services-h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 0.8em;
+}
+.services-p {
+    width: 24em;
+}
+
+
+
+/* Our clients slides */
+.ourClients {
+    height: 35em;
+    display: flex;
+    flex-direction: column;
+    padding: 10em;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+.ourClients-h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+
+
+/* Contact section */
+
+#contact {
+    position: relative;
+    height: 100vh;
+}
+.contact-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background: rgb(62,106,9);
+    background: linear-gradient(0deg, rgba(62,106,9,1) 0%, rgba(170,213,104,1) 90%);
+}
+.contact-top h2 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+.contact-top span {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 400;
+    padding-top: 2vh;
+    padding-bottom: 25vh;
+}
+.contact-bottom {
+    height: 30vh;
+}
+
+/* Contact card */
+.contact-bottom-card {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    margin: 38vh 0 0 50vh;
+    box-shadow: 1px 1px 37px 9px rgba(0,0,0,0.26);
+-webkit-box-shadow: 1px 1px 37px 9px rgba(0,0,0,0.26);
+-moz-box-shadow: 1px 1px 37px 9px rgba(0,0,0,0.26);
+}
+.contact-info {
+    width: 15vw;
+    background-color: #333;
+    color: white;
+    padding: 5vh;
+}
+.contact-message {
+    background-color: white;
+    width: 25vw;
+    padding: 5vh;
+}
+.contact-message form {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+.contact-message form textarea {
+    height: 11.5vh;
+    padding: 10px;
+    resize: none;
+}
+::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+.contact-message input {
+    padding: 10px;
+    height: 3vh;
+}
+.contact-bottom-card h3 {
+    padding-bottom: 2.5vh;
+}
+.contact-message button {
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: #aad667;
+    color: black;
+    width: 150px;
+    height: 3.5vh;
+    margin-left: 17.2vw;
+}
+
+
+/* Swiper */
+.swiper {
+    width: 80%;
+    height: 15em;
+  }
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-img {
+    display: block;
+    height: auto;
+    width: auto;
+}
+
+
+/* Footer styles */
+footer {
+    background-color: white;
+    color: black;
+    padding: 20px 0;
+}
+.footer-content {
+    /* max-width: 1200px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.footer-content-logo img {
+    max-width: 30vh;    
+    height: auto;
+}
+.footer-content-navbar ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-content-navbar li {
+    margin-bottom: 10px;
+}
+.footer-content-navbar a {
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+}
+.footer-content-social a img {
+    max-width: 6vh;
+    height: auto;
+}
+.footer-content-copyright {
+    text-align: center;
+
+    padding-left: 110px;
+}

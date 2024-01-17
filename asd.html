@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="tvInfo-segments">
+        <h2>Nuestros Segmentos de TV</h2>
+        <div class="tvInfo-segments-cards">
+            <div class="tvInfo-segments-cards-indiv">
+                <img src="./resources/imgs/canalRural.jpg" class="card-img" alt="logo">
+                <div class="custom-card-body">
+                    <h5 class="card-title">Canal Rural, Procampo TV</h5>
+                    <p class="card-text">Horarios: Domingo: 12.00am.<br>Temas: Ganadería, Agricultura, entre otros.<br>Otros: Eventos nacionales e internacionales.</p>
+                    <a href="https://www.elrural.com/programas/procampo/" class="card-btn">Conocer más</a>
+                </div>
+            </div>
+            <div class="tvInfo-segments-cards-indiv">
+                <img src="./resources/imgs/canalDiez.jpg" class="card-img" alt="logo">
+                <div class="custom-card-body">
+                    <h5 class="card-title">Canal Diez, Campo Activo</h5>
+                    <p class="card-text">Horarios: Domingo: 11:30am<br>Tema: FCA (Facultad de agronomía de Córdoba.)<br>Otros: Desarrollo rural en toda la provincia.</p>
+                    <a href="https://www.elrural.com/programas/procampo/" class="card-btn">Conocer más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <style>
+        /* Estilos personalizados para la tarjeta */
+
+        .tvInfo-segments { 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .tvInfo-segments-cards {
+            display: flex;
+            justify-content: center;
+        }
+
+.tvInfo-segments-cards-indiv {
+    width: 18rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 5vh 10vh;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    color: #555;
+}
+
+.card-btn {   
+    display: inline-block;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 0.25rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+    </style>
+</body>
+</html>
