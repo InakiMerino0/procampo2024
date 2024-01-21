@@ -160,47 +160,42 @@ nav a {
 #presentationSection {
     display: flex;
     flex-direction: column;
-    background-color: #fff;
     color: #333;
     text-align: center;
 }
 #presentationSection h2{
+    font-weight: 300;
     padding: 60px 0 30px 0;
-    font-size: 2.5rem;
+    font-size: 2.5rem;  
 }
 .presentationSection-content {
     display: flex;
-    margin: 5vh 0vh;
-    width: auto;
-    border-radius: 120px 0 120px 0;
-    background-color: #aad667;
-    padding: 10vh;
+    justify-content: space-between;
+    margin: 10vh 0 10vh 0;
 }
 .presentationSection-content-text {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
 }
-.presentationSection-content-text h3 {
+.presentationSection-content-title {
+    background-color: #aad667;
+    border-radius: 0 20px 20px 0;
+    padding: 10vh;
+    padding-left: 20vw;
     font-size: 1.7rem;
 }
 .presentationSection-content-text p {
     margin: 3em;
     font-size: 1.5rem;
 }
-.presentationSection-content-img {
-    width: 706.6px;
-    height: 451px;
-}
-.presentationSection-content-img img{
-    width: auto;
-    height: 100%;
-}
 .presentationSection-content-reverse {
     flex-direction: row-reverse;
+}
+.presentationSection-content-title-2 {
+    border-radius: 20px 0px 0px 20px;
     background-color: #aad667;
-    border-radius: 0 120px 0 120px;
-    margin-top: 5vh;
+    padding: 10vh;
+    padding-right: 20vw;
+    font-size: 1.7rem;
 }
 
 
@@ -225,7 +220,7 @@ nav a {
     text-align: center;
     padding: 4vh;
     padding-left: 30vh;
-    width: 50vh;
+    width: 30vw;
 }
 .tvInfo-content-text h2, .tvInfo-segments h2 {
     padding-bottom: 3.5vh;
@@ -236,14 +231,13 @@ nav a {
     font-weight: 500;
     line-height: 35px;
 }
-.tvInfo-cards {
-    padding: 1.6vh;
-}
 .tvInfo-cards-struct {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 45vh;
+    padding: 1.6vh;
+    margin: 1.5vh;              
     height: 20vh;
     background-color: #ffffff;
     border-radius: 10px;
@@ -251,8 +245,8 @@ nav a {
 }
 .tvInfo-cards-struct2 {
     display: flex;
-    /* align-items: top;
-    justify-content: space-around; */
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 .tvInfo-cards-img-struct {
     display: flex;
@@ -331,18 +325,8 @@ transition: background-color 0.3s ease;
 }
 .ourServices-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-top: 3.5em;
-}
-.ourServices-content-1 {
-    grid-area: one;
-}
-.ourServices-content-2 {
-    margin: 0 150px;
-    grid-area: two;
-}
-.ourServices-content-3 {
-    grid-area: three;
 }
 .services-h3 {
     font-size: 1.5rem;
